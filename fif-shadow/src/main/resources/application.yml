@@ -1,0 +1,6 @@
+spring:
+  application:
+    name: FileOfShadow
+  profiles:
+    active: dev
+    default: dev
