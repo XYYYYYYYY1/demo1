@@ -8,11 +8,19 @@
         <version>3.3.4</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
+
     <groupId>com.shadow</groupId>
     <artifactId>FifShadow</artifactId>
     <version>0.0.1-SNAPSHOT</version>
+
     <name>FifShadow</name>
     <description>FifShadow</description>
+    <repositories>
+        <repository>
+            <id>central</id>
+            <url>https://repo.maven.apache.org/maven2</url>
+        </repository>
+    </repositories>
 
     <developers>
         <developer>
@@ -26,7 +34,9 @@
     <properties>
         <java.version>17</java.version>
     </properties>
+<!--    具体依赖配置-->
     <dependencies>
+<!--        配置一个具体地依赖信息-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
@@ -37,16 +47,30 @@
             <artifactId>lombok</artifactId>
             <optional>true</optional>
         </dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-test</artifactId>
-            <scope>test</scope>
-        </dependency>
 
         <dependency>
             <groupId>top.wpaint</groupId>
             <artifactId>alist-sdk</artifactId>
             <version>0.1.0</version>
+        </dependency>
+
+        <!-- MyBatis-Flex 依赖 -->
+        <dependency>
+            <groupId>com.mybatis-flex</groupId>
+            <artifactId>mybatis-flex-spring-boot3-starter</artifactId>
+            <version>1.9.7</version>
+        </dependency>
+        <dependency>
+            <groupId>com.mybatis-flex</groupId>
+            <artifactId>mybatis-flex-processor</artifactId>
+            <version>1.9.7</version>
+            <scope>provided</scope>
+        </dependency>
+        <!-- Sa-Token 依赖 -->
+        <dependency>
+            <groupId>cn.dev33</groupId>
+            <artifactId>sa-token-spring-boot-starter</artifactId>
+            <version>1.9.0</version>
         </dependency>
 
     </dependencies>
