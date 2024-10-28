@@ -53,6 +53,12 @@
             <artifactId>alist-sdk</artifactId>
             <version>0.1.0</version>
         </dependency>
+        <!--        准备 mysql、minio、mybatis-flex、sa-token、oss-sdk依赖-->
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>8.0.33</version>
+        </dependency>
 
 <!--        minio 依赖 -->
         <dependency>
@@ -72,19 +78,13 @@
         <dependency>
             <groupId>com.mybatis-flex</groupId>
             <artifactId>mybatis-flex-spring-boot3-starter</artifactId>
-            <version>1.9.7</version>
-        </dependency>
-        <dependency>
-            <groupId>com.mybatis-flex</groupId>
-            <artifactId>mybatis-flex-processor</artifactId>
-            <version>1.9.7</version>
-            <scope>provided</scope>
+            <version>1.9.8</version>
         </dependency>
         <!-- Sa-Token 依赖 -->
         <dependency>
             <groupId>cn.dev33</groupId>
-            <artifactId>sa-token-spring-boot-starter</artifactId>
-            <version>1.9.0</version>
+            <artifactId>sa-token</artifactId>
+            <version>1.6.0</version>
         </dependency>
 
     </dependencies>
