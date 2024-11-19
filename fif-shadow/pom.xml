@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>3.3.4</version>
+        <relativePath/> <!-- lookup parent from repository -->
+    </parent>
+
+    <groupId>com.shadow</groupId>
+    <artifactId>FifShadow</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+
+    <name>FifShadow</name>
+    <description>FifShadow</description>
+    <repositories>
+        <repository>
+            <id>central</id>
+            <url>https://repo.maven.apache.org/maven2</url>
+        </repository>
+    </repositories>
+
+    <developers>
+        <developer>
+            <name>潘</name>
+            <email>tecwds@163.com</email>
+            <organization>wpaint.top</organization>
+            <organizationUrl>http://www.wpaint.top</organizationUrl>
+        </developer>
+    </developers>
+
+    <properties>
+        <java.version>17</java.version>
+    </properties>
+<!--    具体依赖配置-->
+    <dependencies>
+<!--        配置一个具体地依赖信息-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <optional>true</optional>
+        </dependency>
+
+        <dependency>
+            <groupId>top.wpaint</groupId>
+            <artifactId>alist-sdk</artifactId>
+            <version>0.1.0</version>
+        </dependency>
+        <!--        准备 mysql、minio、mybatis-flex、sa-token、oss-sdk依赖-->
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>8.0.33</version>
+        </dependency>
+
+<!--        minio 依赖 -->
+        <dependency>
+            <groupId>io.minio</groupId>
+            <artifactId>minio</artifactId>
+            <version>8.5.12</version>
+        </dependency>
+
+<!--        aliyun oss 依赖 -->
+        <dependency>
+            <groupId>com.aliyun.oss</groupId>
+            <artifactId>aliyun-sdk-oss</artifactId>
+            <version>3.18.1</version>
+        </dependency>
+
+        <!-- MyBatis-Flex 依赖 -->
+        <dependency>
+            <groupId>com.mybatis-flex</groupId>
+            <artifactId>mybatis-flex-spring-boot3-starter</artifactId>
+            <version>1.9.8</version>
+        </dependency>
+        <!-- Sa-Token 依赖 -->
+        <dependency>
+            <groupId>cn.dev33</groupId>
+            <artifactId>sa-token</artifactId>
+            <version>1.6.0</version>
+        </dependency>
+
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <configuration>
+                    <excludes>
+                        <exclude>
+                            <groupId>org.projectlombok</groupId>
+                            <artifactId>lombok</artifactId>
+                        </exclude>
+                    </excludes>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>
